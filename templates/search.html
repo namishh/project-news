@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+  {% block body %}
+
+<body>
+<p class = 'text-center my-3'>
+<form method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1"><h1 class = ' display-3'>Search anything!</h1></label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name = "search" placeholder="Search.......">
+  </div><br>
+  <button type="submit" class="btn btn-outline-dark">Submit</button>
+</form>
+
+</p>
+<p>
+    <h2 class="h2">Trending...</h2>
+    {% for dict_item in final_query %}
+        {% for key, value in dict_item.items() %}
+            {{key}} <a href="{{value}}">Link</a><br>
+
+
+   {% endfor %}
+{% endfor %}
+</p>
+</body>
+{% endblock body %}
+</html>
+
