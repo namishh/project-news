@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '629f3b11153de13c74b7a06a66f13bd6'
 
 # Init
-newsapi = NewsApiClient(api_key='9319a21a7472491897d5efd548f290dc')
+newsapi = NewsApiClient(api_key='YOUR_KEY_HERE')
 
 @app.route('/')
 def hello_world():
